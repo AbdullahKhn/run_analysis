@@ -36,9 +36,9 @@ data_melt <- melt(data_m_sd,id=c("ID_Obs","Activity"),measure.vars=c(variables))
 
 data_tidy <- data.frame()
 for (i in 1:30){
-	dt1 <- data_melt[data_melt$ID_Obs == i,]
-	dtcast <- dcast(dt1, Activity ~ variable,mean)
-	dt_ct_obs <- cbind(i, dtcast)
-	data_tidy <- rbind(data_tidy,dt_ct_obs)
+	dt <- data_melt[data_melt$ID_Obs == i,]
+	dtcast <- dcast(dt, Activity ~ variable,mean)
+	dtcast_obs <- cbind(i, dtcast)
+	data_tidy <- rbind(data_tidy,dtcast_obs)
 }
 names(data_tidy)[1] <- paste("ID_Obs")
