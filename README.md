@@ -12,6 +12,8 @@ The script uses two packages which are 'dplyr' and 'reshape2'. Hence, if they ar
 The readme file will take you through the script step-wise explaining the process being carried out to reach the end tidy data.
 First if you note the script is in steps, this will make it easy to explain the script, and after each step is finished a space is given between the two steps. 
 
+Make sure that you set your directory to the file 'UCI HAR Dataset' that you unzipped from the samsung data.
+
 ##Reading and extracting the required data
 
 The first four steps in the script reads in all the data available to you in the samsung data which you just downloaded in your directory.
