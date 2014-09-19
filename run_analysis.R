@@ -16,8 +16,8 @@ data <- rbind(train_data,test_data)
 #"read in the feature varaible names and name the data set"
 features <- read.table("UCI HAR Dataset/features.txt")
 labels <- as.vector(features[['V2']])
-label_obs_act <- c("ID_Sub","Activity",labels)
-colnames(data) <- label_obs_act
+label_sub_act <- c("ID_Sub","Activity",labels)
+colnames(data) <- label_sub_act
 
 #"select the required feature variables"
 library(dplyr)
