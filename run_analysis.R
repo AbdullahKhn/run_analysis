@@ -24,9 +24,11 @@ data_m_sd <- data_m_sd[,-33]
 data_m_sd <- data_m_sd[,-34]
 data_m_sd <- data_m_sd[,-35]
 data_m_sd <- data_m_sd[,-36]
+
 colnames(data_m_sd) <- gsub("\\(\\)","",names(data_m_sd),)
 colnames(data_m_sd) <- gsub("-","_",names(data_m_sd),)
-activityname <- c("Walking","Walking_Upstairs","Walking_Downstairs","Sitting","Standing","Laying")
+act <- read.table("activity_labels.txt")
+activityname <- as.vector(act[['V2']])
 data_m_sd$Activity <- factor(data_m_sd$Activity, levels = c(1:6), labels = c(activityname))
  
 library(reshape2)
