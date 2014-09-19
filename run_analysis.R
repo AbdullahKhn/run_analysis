@@ -42,3 +42,4 @@ for (i in 1:30){
 	data_tidy <- rbind(data_tidy,dtcast_obs)
 }
 names(data_tidy)[1] <- paste("ID_Obs")
+
